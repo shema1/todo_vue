@@ -1,5 +1,5 @@
 # todo_list
-
+[Link on project](https://naughty-bardeen-ffbcf5.netlify.app/)
 ## Project setup
 ```
 npm install
