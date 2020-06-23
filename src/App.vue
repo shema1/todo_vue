@@ -13,7 +13,6 @@ export default {
 </script>
 
 <style>
-
 #app {
   font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +22,7 @@ export default {
   margin: 0;
   padding: 0;
 }
-body{
+body {
   margin: 0;
   box-sizing: border-box;
 }
@@ -34,11 +33,11 @@ ul {
   padding: 0;
 }
 
-a{
+a {
   color: #fff;
 }
 
-.material-icons{
+.material-icons {
   cursor: pointer;
 }
 </style>

@@ -8,6 +8,11 @@
         <button class="btn" @click="createTask">create</button>
       </div>
       <div v-if="$attrs.id" class="task-info__head">
+        <router-link to="/">
+          <span class="material-icons">
+            arrow_back_ios
+          </span>
+        </router-link>
         <span v-if="!edit" class="task-info__name" @click="editTask">{{
           TASK.name
         }}</span>
@@ -19,7 +24,6 @@
         <span class="material-icons" @click="openPopUp">delete</span>
       </div>
       <ul class="task-info__list">
-        <!-- <span v-if="SUBTASKS.includes(TASK.id)">List todo is empty</span> -->
         <Task
           v-for="task in SUBTASKS"
           :key="task.id"
@@ -75,7 +79,7 @@ export default {
     },
 
     editTask() {
-      this.taskName = this.TASK.name
+      this.taskName = this.TASK.name;
       this.edit = true;
     },
     cancel() {
@@ -104,13 +108,13 @@ export default {
       this.taskName = "";
       this.CREATE_TASK(task);
     },
-    updateTask(){
+    updateTask() {
       let task = {
         ...this.TASK,
-        name:this.taskName,
-      }
-      this.UPDADATE_TASK(task)
-       this.edit = false;
+        name: this.taskName,
+      };
+      this.UPDADATE_TASK(task);
+      this.edit = false;
     },
     deleteTask(id) {
       this.DEL_TASK(id);
