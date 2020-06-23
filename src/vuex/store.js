@@ -52,7 +52,7 @@ let store = new Vuex.Store({
     },
     actions: {
         GET_TASKS({ commit }) {
-            axios.get("https://5ec27ea38ebdcc0016a59db2.mockapi.io/todoVue")
+            fetch("https://5ec27ea38ebdcc0016a59db2.mockapi.io/todoVue")
                 .then(response => commit('SET_TASKS_TO_STATE', response.data))
         },
 
@@ -94,7 +94,7 @@ let store = new Vuex.Store({
         },
 
         GET_SUBTASKS(context) {
-            axios.get(`${baseUrlSubtasks}`)
+            fetch(`${baseUrlSubtasks}`)
                 .then(response => {
                     context.commit("SET_SUBTASK_TO_STATE", response.data)
                     context.commit("FILTER_SUBTASKS_TO_STATE")
